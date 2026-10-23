@@ -1,4 +1,4 @@
-# Jonathan Jesni - Portfolio
+# Lalit sharma - Portfolio
 
 An interactive 3D developer portfolio. The hero is a scroll-driven WebGL laptop that "boots"
 as you scroll and then dissolves - pixel-for-pixel - into the live Projects section, backed by
