@@ -4,7 +4,7 @@ An interactive 3D developer portfolio. The hero is a scroll-driven WebGL laptop 
 as you scroll and then dissolves - pixel-for-pixel - into the live Projects section, backed by
 cinematic shader transitions and physics-based interactions.
 
-🌐 **Live:** [jonathanjesni.com](https://jonathanjesni.com)
+🌐 **Live:** [lks.com](https://lks.com)
 
 ## Highlights
 
@@ -57,7 +57,7 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Configuration
 
 `NEXT_PUBLIC_SITE_URL` sets the absolute base for canonical links, Open Graph / Twitter image
-URLs, and the sitemap. It falls back to `https://jonathanjesni.com`, so set it per environment
+URLs, and the sitemap. It falls back to `https://lks.com`, so set it per environment
 (e.g. your Vercel preview URL) when deploying.
 
 ```bash
