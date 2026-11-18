@@ -1,5 +1,7 @@
 "use client";
 
+import ProofStrip from "./ProofStrip";
+import { PROFILE } from "../lib/data";
 import {
   useEffect,
   useLayoutEffect,
@@ -270,21 +272,21 @@ export default function HeroSection({
         gsap.set(allChars, { clearProps: "transform" });
         gsap.set([".name-part-1", ".name-part-2"], { yPercent: 0 });
         gsap.set(".hero-name-mask", { overflow: "visible" });
-        gsap.set([".hero-tagline", ".hero-sub", ".hero-buttons"], { opacity: 1, y: 0 });
+        gsap.set([".hero-tagline", ".hero-sub", ".proof-strip", ".hero-buttons"], { opacity: 1, y: 0 });
         return;
       }
 
       gsap.set(".name-part-1", { yPercent: 100 });
       gsap.set(".name-part-2", { yPercent: -100 });
       gsap.set(
-        [".hero-tagline", ".hero-sub", ".hero-buttons"],
+        [".hero-tagline", ".hero-sub", ".proof-strip", ".hero-buttons"],
         { opacity: 0, y: -80 }
       );
     } catch {
       gsap.set([".name-part-1", ".name-part-2"], { yPercent: 0 });
       gsap.set(".hero-name-mask", { overflow: "visible" });
       gsap.set(
-        [".hero-tagline", ".hero-sub", ".hero-buttons"],
+        [".hero-tagline", ".hero-sub", ".proof-strip", ".hero-buttons"],
         { opacity: 1, y: 0 }
       );
       window.dispatchEvent(new CustomEvent(MOTION_FAILED_EVENT));
@@ -324,7 +326,7 @@ export default function HeroSection({
         });
 
         /* Supporting copy follows the name in */
-        gsap.to([".hero-tagline", ".hero-sub", ".hero-buttons"], {
+        gsap.to([".hero-tagline", ".hero-sub", ".proof-strip", ".hero-buttons"], {
           y: 0,
           opacity: 1,
           ease: "power3.out",
@@ -339,7 +341,7 @@ export default function HeroSection({
         gsap.set([".name-part-1", ".name-part-2"], { yPercent: 0 });
         gsap.set(".hero-name-mask", { overflow: "visible" });
         gsap.set(
-          [".hero-tagline", ".hero-sub", ".hero-buttons"],
+          [".hero-tagline", ".hero-sub", ".proof-strip", ".hero-buttons"],
           { opacity: 1, y: 0 }
         );
       });
@@ -348,7 +350,7 @@ export default function HeroSection({
       gsap.set([".name-part-1", ".name-part-2"], { yPercent: 0 });
       gsap.set(".hero-name-mask", { overflow: "visible" });
       gsap.set(
-        [".hero-tagline", ".hero-sub", ".hero-buttons"],
+        [".hero-tagline", ".hero-sub", ".proof-strip", ".hero-buttons"],
         { opacity: 1, y: 0 }
       );
       window.dispatchEvent(new CustomEvent(MOTION_FAILED_EVENT));
@@ -568,6 +570,8 @@ export default function HeroSection({
   </TerminalHighlight>.
 </p>
 
+                <ProofStrip animate={animate} />
+
                 <div className="hero-buttons">
                   <a
                     href="#projects"
@@ -594,7 +598,7 @@ export default function HeroSection({
                     <HoverScrambleText text="Explore featured work" />
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/Lalit Sharma/"
+                    href={PROFILE.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-outline"
