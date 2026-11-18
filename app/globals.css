@@ -2906,7 +2906,7 @@ canvas.glass-image-canvas {
 }
 
 /* Copy column */
-.cs-text {
+/* .cs-text {
   display: flex;
   flex-direction: column;
   will-change: transform;
@@ -2944,16 +2944,134 @@ canvas.glass-image-canvas {
   line-height: 1.6;
   color: var(--ink-4);
   margin: 0 0 16px;
-}
+} */
 
 /* Source / demo link row under each project's copy */
-.cs-links {
+/* .cs-links {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
   margin-top: 18px;
+} */
+
+
+
+
+/* ============================================================
+   FEATURED PROJECTS — EDITORIAL TYPOGRAPHY
+   Preserve existing dark / antique-gold visual identity.
+   ============================================================ */
+
+.cs-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  min-width: 0;
+  will-change: transform;
 }
+
+.cs-title {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: clamp(30px, 2.8vw, 38px);
+  font-weight: 750;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+  color: var(--ink-0);
+  margin: 0 0 9px;
+  text-wrap: balance;
+}
+
+.cs-subtitle {
+  font-family: var(--font-instrument), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(16px, 1.35vw, 18px);
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--accent);
+  margin: 0 0 20px;
+}
+
+.cs-desc {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: clamp(15px, 1.1vw, 16px);
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: -0.01em;
+  color: var(--ink-2);
+  max-width: 58ch;
+  margin: 0 0 20px;
+  text-wrap: pretty;
+}
+
+.cs-note {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--ink-3);
+  margin: 0 0 16px;
+}
+
+/* Project metric — highlight the important result */
+.cs-lead-metric,
+.cs-metric {
+  display: block;
+  margin: 10px 0 16px;
+  color: var(--accent-bright);
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+}
+
+/* Key contributions — readable editorial list */
+.cs-proof {
+  display: grid;
+  gap: 11px;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+  max-width: 58ch;
+}
+
+.cs-proof li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--ink-2);
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 13px;
+  font-weight: 450;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+  text-wrap: pretty;
+}
+
+.cs-proof li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 9px rgba(201, 168, 82, 0.25);
+}
+
+/* Source and live demo links */
+.cs-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  align-items: center;
+  margin-top: 18px;
+}
+
 
 /* Live Demo stands out from the muted source chips */
 .cs-demo {
@@ -4326,3 +4444,7 @@ canvas.glass-image-canvas {
     transform: translateY(14px);
   }
 }
+
+
+
+
