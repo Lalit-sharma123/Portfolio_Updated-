@@ -608,7 +608,7 @@ export default function HeroSection({
                     <HoverScrambleText text="Connect on LinkedIn" />
                   </a>
                   <a
-                    href="/assets/Jonathan_Resume.pdf"
+                    href={PROFILE.resume}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-outline"

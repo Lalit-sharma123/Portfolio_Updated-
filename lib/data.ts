@@ -356,6 +356,8 @@ export const PROFILE = {
   email: "lalit1@gmail.com",
   linkedin: "https://www.linkedin.com/in/lalitsharma1/",
   linkedinHandle: "lalitsharma1",
+  github: "https://github.com/lalit-sharma123",
+  githubHandle: "lalit-sharma123",
   resume: "/assets/Lalit_Resume.pdf",
   education:
     "B.Tech in Computer Science & Engineering, Bharat Institute of Technology, Meerut (2021–2025)",
@@ -397,6 +399,7 @@ export const FREELANCE_SERVICES = [
     title: "GenAI & LLM Apps",
     description:
       "Chat assistants, copilots and LLM-powered features built on locally hosted or API-based models.",
+    deliverables: ["LLM chat assistant or copilot", "Prompt, tool & guardrail design", "API + UI integration"],
     stack: ["LLMs", "LangChain", "FastAPI"],
   },
   {
@@ -405,6 +408,7 @@ export const FREELANCE_SERVICES = [
     title: "RAG & Document AI",
     description:
       "Ask-your-documents systems: PDF/OCR extraction, chunking, embeddings and hybrid vector search.",
+    deliverables: ["PDF / OCR document ingestion", "Hybrid vector + keyword search", "Q&A API with source citations"],
     stack: ["Embeddings", "Milvus", "FAISS"],
   },
   {
@@ -413,6 +417,7 @@ export const FREELANCE_SERVICES = [
     title: "AI Agents & Automation",
     description:
       "Multi-step agent workflows with tool calling that automate repetitive business processes.",
+    deliverables: ["Multi-step agent workflow", "Tool & third-party API integrations", "Logging and human-in-the-loop checks"],
     stack: ["LangGraph", "MCP", "Tools"],
   },
   {
@@ -421,6 +426,7 @@ export const FREELANCE_SERVICES = [
     title: "AI Data Analytics",
     description:
       "Natural-language querying over your databases with automated KPIs, charts and dashboards.",
+    deliverables: ["Database, CSV & Excel connectors", "Natural-language data querying", "Automated KPIs & dashboards"],
     stack: ["Pandas", "SQL", "Dashboards"],
   },
   {
@@ -429,6 +435,7 @@ export const FREELANCE_SERVICES = [
     title: "Computer Vision",
     description:
       "Object detection, OCR and image-analysis pipelines tailored to your data.",
+    deliverables: ["Detection / OCR pipeline", "Fine-tuning on your own data", "Inference API"],
     stack: ["YOLO", "OpenCV", "PyTorch"],
   },
   {
@@ -437,6 +444,7 @@ export const FREELANCE_SERVICES = [
     title: "AI Backend & APIs",
     description:
       "Production-ready APIs that connect models, databases and your frontend — containerised and deployable.",
+    deliverables: ["FastAPI services", "Docker-based deployment", "Documentation & handover"],
     stack: ["FastAPI", "Docker", "REST"],
   },
 ] as const;
@@ -458,5 +466,7 @@ export const ENGAGEMENT_MODELS = [
     detail: "Short engagements to plan, review or integrate AI into an existing system.",
   },
 ] as const;
+
+export const BRIEF_TIMELINES = ["ASAP", "Within a month", "1–3 months", "Flexible"] as const;
 
 export const FREELANCE_PROCESS = ["Discuss", "Scope", "Build", "Deliver", "Support"] as const;

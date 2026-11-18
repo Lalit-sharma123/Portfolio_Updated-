@@ -102,7 +102,8 @@ const FAILURE_CLEAR_TARGETS = [
   ".xp-date",
   ".xp-stagger",
   ".fl-reveal",
-  ".fl-service",
+  ".fl-line-inner",
+  ".fl-row",
   ".fl-process-fill",
 ].join(",");
 
@@ -500,7 +501,7 @@ export default function Home() {
               travelTo(0, event.detail === 0);
             }}
           >
-            <span className="bracket">&#123;</span>J
+            <span className="bracket">&#123;</span>L
             <span className="bracket">&#125;</span>
           </a>
 

@@ -153,7 +153,7 @@ export default function TerminalBlock() {
             <span className="term-dot term-dot--yellow" />
             <span className="term-dot term-dot--green" />
           </div>
-          <span className="term-title">guest@jonathan: ~</span>
+          <span className="term-title">guest@lalit: ~</span>
         </div>
 
         {/* ---- Body ---- */}

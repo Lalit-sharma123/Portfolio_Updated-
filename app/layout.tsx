@@ -12,7 +12,8 @@ import "./evolution.css";
 
 // Absolute-URL base for canonical links, OG/Twitter images, and the sitemap.
 // Env var wins on Vercel previews; falls back to the production domain.
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://jonathanjesni.com";
+import { SITE_URL } from "../lib/site";
+import { PROFILE } from "../lib/data";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -162,9 +163,8 @@ if (!location.hash) window.scrollTo(0, 0);`}
         "AI Data Analytics",
       ],
       sameAs: [
-        // Replace these with your actual public profile URLs.
-        "https://github.com/YOUR_GITHUB_USERNAME",
-        "https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/",
+        PROFILE.github,
+        PROFILE.linkedin,
       ],
     }),
   }}

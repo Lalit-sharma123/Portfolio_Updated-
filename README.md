@@ -92,3 +92,15 @@ tests/e2e/      Playwright end-to-end tests
 Deploys as a standard Next.js app on [Vercel](https://vercel.com/new). Set
 `NEXT_PUBLIC_SITE_URL` in the project's environment variables so canonical/OG/sitemap URLs
 resolve to your domain.
+
+
+
+
+############
+Go to web3forms.com, enter lalit1@gmail.com, and click Create Access Key. The key arrives in that inbox.
+In the project folder (portfolio-ver-2-main), create a file named .env.local with one line:
+
+NEXT_PUBLIC_WEB3FORMS_KEY=paste-your-key-here
+Restart npm run dev, send yourself a test brief, and check your inbox and spam folder.
+When you deploy, add the same variable in your host's settings (on Vercel: Project → Settings → Environment Variables), then redeploy. .env.local is never uploaded, because .gitignore excludes it.
+

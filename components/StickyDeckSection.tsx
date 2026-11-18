@@ -61,7 +61,7 @@ const projectPositionAt = (progress: number) => {
   return 2;
 };
 
-/* power4.inOut — mirrors the {J} logo's scroll-to feel for click jumps */
+/* power4.inOut — mirrors the {L} logo's scroll-to feel for click jumps */
 const power4InOut = (t: number) =>
   t < 0.5 ? 8 * t * t * t * t : 1 - Math.pow(-2 * t + 2, 4) / 2;
 
@@ -978,7 +978,7 @@ export default function StickyDeckSection({
 
   /* Jump to a project by scrolling to its position within the sticky track.
      Routed through the shared Lenis instance so it inherits the site's eased
-     momentum (matching the {J} logo's power4.inOut feel). */
+     momentum (matching the {L} logo's power4.inOut feel). */
   const jumpTo = (requestedIndex: number, immediate = false) => {
     const index = Math.max(0, Math.min(N - 1, requestedIndex));
     const st = stRef.current;

@@ -243,7 +243,7 @@ export default function ContactSection({ animate = true }: ContactSectionProps) 
             </a>
 
             <a
-              href="https://github.com/Jonathan-Jesni?tab=repositories"
+              href={`${PROFILE.github}?tab=repositories`}
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link"

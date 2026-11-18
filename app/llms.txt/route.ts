@@ -1,6 +1,6 @@
-import { PROJECTS, BUILDING } from "@/lib/data";
+import { PROJECTS, BUILDING, PROFILE } from "@/lib/data";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://jonathanjesni.com";
+import { SITE_URL } from "../../lib/site";
 
 // First sentence of a description field, used as a tight one-line gist.
 function firstSentence(text: string): string {
@@ -54,7 +54,7 @@ function buildBuildingSection(): string {
 }
 
 function buildBody(): string {
-  return `# Lalit sharma
+  return `# Lalit Sharma
 
 > AI Developer and AI Engineer focused on autonomous AI agents, LLM applications, RAG, data analytics, and computer vision; B.Tech in Computer Science & Engineering from Bharat Institute of Technology, Meerut (2021–2025); interested in building practical AI solutions and intelligent applications.
 
@@ -66,9 +66,10 @@ ${buildBuildingSection()}
 
 ## Links
 - Site: ${SITE_URL}
-- GitHub: https://github.com/Jonathan-Jesni
-- LinkedIn: https://www.linkedin.com/in/jonathan-jesni/
-- Resume: ${SITE_URL}/assets/Jonathan_Resume.pdf
+- GitHub: ${PROFILE.github}
+- LinkedIn: ${PROFILE.linkedin}
+- Email: ${PROFILE.email}
+- Resume: ${SITE_URL}${PROFILE.resume}
 `;
 }
 

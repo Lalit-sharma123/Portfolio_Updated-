@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollToPlugin);
 /* ─────────────────────────────────────────────────────────────────────
    Footer — a quiet, classy sign-off, not a marketing block.
 
-   Three balanced zones on a 1fr/auto/1fr grid (the {J} logo doubles as
+   Three balanced zones on a 1fr/auto/1fr grid (the {L} logo doubles as
    back-to-top, the status line is dead-centered, the stack credit sits
    right), over a quiet copyright sub-row. Surface is a touch darker than
    --surface-0 so it reads as the floor of the page.
@@ -72,7 +72,7 @@ export default function Footer() {
     <footer className="site-footer" id="footer">
       <div className="footer-row">
         <button type="button" className="footer-logo" onClick={backToTop} aria-label="Back to top">
-          <span className="bracket">&#123;</span>J<span className="bracket">&#125;</span>
+          <span className="bracket">&#123;</span>L<span className="bracket">&#125;</span>
         </button>
 
         <span className="footer-status">

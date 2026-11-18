@@ -42,6 +42,7 @@ export const STARTER_CHIPS = [
 
 const EMAIL_LINK: BotLink = { label: `✉ ${PROFILE.email}`, href: `mailto:${PROFILE.email}` };
 const LINKEDIN_LINK: BotLink = { label: `in/${PROFILE.linkedinHandle}`, href: PROFILE.linkedin };
+const GITHUB_LINK: BotLink = { label: `GitHub ↗`, href: PROFILE.github };
 
 const norm = (s: string) =>
   s
@@ -103,7 +104,7 @@ const skills = (): BotAnswer => ({
 const projects = (): BotAnswer => ({
   text: `Lalit has ${PROJECTS.length} featured projects. Ask about any of them by name:`,
   bullets: PROJECTS.map((p) => `${p.title.replace(/\s+-/, " –")} — ${p.subtitle}`),
-  links: [{ label: "Browse projects", href: "#projects", section: "projects" }],
+  links: [{ label: "Browse projects", href: "#projects", section: "projects" }, GITHUB_LINK],
   chips: PROJECTS.slice(0, 3).map((p) => p.title.split(/[–-]/)[0].trim()),
 });
 
@@ -157,8 +158,8 @@ const pricing = (): BotAnswer => ({
 
 const contact = (): BotAnswer => ({
   text: "The fastest ways to reach Lalit:",
-  bullets: [`Email: ${PROFILE.email}`, `LinkedIn: ${PROFILE.linkedinHandle}`],
-  links: [EMAIL_LINK, LINKEDIN_LINK, { label: "Contact section", href: "#contact", section: "contact" }],
+  bullets: [`Email: ${PROFILE.email}`, `LinkedIn: ${PROFILE.linkedinHandle}`, `GitHub: ${PROFILE.githubHandle}`],
+  links: [EMAIL_LINK, LINKEDIN_LINK, GITHUB_LINK, { label: "Contact section", href: "#contact", section: "contact" }],
   chips: ["Freelance services", "Resume"],
 });
 
@@ -193,7 +194,7 @@ const INTENTS: Intent[] = [
   { answer: about, words: ["who", "about", "yourself", "introduce", "introduction", "profile", "lalit", "summary", "background"] },
   { answer: experience, words: ["experience", "work", "worked", "job", "jobs", "career", "company", "companies", "employment", "intern", "internship", "role", "current", "currently working"] },
   { answer: skills, words: ["skill", "skills", "stack", "tech", "technology", "technologies", "tools", "languages", "frameworks", "expertise", "know"] },
-  { answer: projects, words: ["project", "projects", "portfolio", "built", "work samples", "showcase", "github"] },
+  { answer: projects, words: ["project", "projects", "portfolio", "built", "work samples", "showcase", "github", "repo", "repos", "code"] },
   { answer: building, words: ["building", "in progress", "learning", "currently building", "working on", "now"] },
   { answer: education, words: ["education", "degree", "college", "university", "study", "studied", "btech", "b.tech", "graduate", "qualification"] },
   { answer: freelance, words: ["freelance", "freelancing", "hire", "hiring", "contract", "available", "availability", "services", "service", "offer", "help me", "build for me", "gig"] },
