@@ -307,3 +307,156 @@ export const BUILDING = [
 
 
 export type BuildingItem = (typeof BUILDING)[number];
+
+export const EXPERIENCE = [
+  {
+    id: "exp-expediens",
+    role: "AI Engineer",
+    company: "Expediens eSolutions",
+    mode: "Full-time",
+    start: "2026-01",
+    end: null,
+    period: "Jan 2026 — Present",
+    summary:
+      "Engineering AI-powered products end to end — from LLM integration and retrieval pipelines to backend services that put models into production workflows.",
+    highlights: [
+      "Building Generative AI and agentic features on top of locally hosted and API-based LLMs",
+      "Designing RAG and document-intelligence pipelines with embeddings and vector search",
+      "Shipping FastAPI services that connect models, databases, and product interfaces",
+    ],
+    tags: ["LLMs", "RAG", "Agentic AI", "FastAPI", "Python"],
+  },
+  {
+    id: "exp-unihox",
+    role: "AI Developer Intern",
+    company: "Unihox AI",
+    mode: "Remote Internship",
+    start: "2025-07",
+    end: "2025-12",
+    period: "Jul 2025 — Dec 2025",
+    summary:
+      "Six-month remote internship developing and experimenting with AI applications across machine learning, LLMs, and data workflows.",
+    highlights: [
+      "Prototyped LLM-powered features and conversational AI workflows",
+      "Worked on data preprocessing, model experimentation, and evaluation",
+      "Integrated AI models with backend APIs for application use",
+    ],
+    tags: ["Machine Learning", "LLMs", "Python", "APIs", "Remote"],
+  },
+] as const;
+
+export type ExperienceItem = (typeof EXPERIENCE)[number];
+
+/* ── Profile & contact — single source of truth for Contact,
+      Freelance and the profile chatbot. ───────────────────── */
+export const PROFILE = {
+  name: "Lalit Sharma",
+  role: "AI Engineer",
+  headline: "AI Developer & AI Engineer — Generative AI, LLM apps, agents and RAG systems",
+  email: "lalit1@gmail.com",
+  linkedin: "https://www.linkedin.com/in/lalitsharma1/",
+  linkedinHandle: "lalitsharma1",
+  resume: "/assets/Lalit_Resume.pdf",
+  education:
+    "B.Tech in Computer Science & Engineering, Bharat Institute of Technology, Meerut (2021–2025)",
+  focus: ["Generative AI", "LLM applications", "Autonomous AI agents", "RAG systems", "Computer vision"],
+  availability: "Open to freelance and contract-basis AI projects",
+} as const;
+
+export const SKILL_PILLS = [
+  "Python",
+  "SQL",
+  "Flask",
+  "Deep Learning",
+  "Computer Vision",
+  "Recommender Systems",
+  "LLMs / GenAI",
+  "YOLO",
+  "Semantic Segmentation",
+  "PyTorch",
+  "TensorFlow",
+  "Keras",
+  "OpenCV",
+  "NumPy",
+  "Pandas",
+  "FastAPI",
+  "Docker",
+  "Google Cloud",
+  "GPU Computing",
+  "Agentic AI",
+  "CI/CD",
+  "REST APIs",
+  "LangChain",
+  "Hugging Face",
+] as const;
+
+export const FREELANCE_SERVICES = [
+  {
+    id: "svc-genai",
+    code: "01",
+    title: "GenAI & LLM Apps",
+    description:
+      "Chat assistants, copilots and LLM-powered features built on locally hosted or API-based models.",
+    stack: ["LLMs", "LangChain", "FastAPI"],
+  },
+  {
+    id: "svc-rag",
+    code: "02",
+    title: "RAG & Document AI",
+    description:
+      "Ask-your-documents systems: PDF/OCR extraction, chunking, embeddings and hybrid vector search.",
+    stack: ["Embeddings", "Milvus", "FAISS"],
+  },
+  {
+    id: "svc-agents",
+    code: "03",
+    title: "AI Agents & Automation",
+    description:
+      "Multi-step agent workflows with tool calling that automate repetitive business processes.",
+    stack: ["LangGraph", "MCP", "Tools"],
+  },
+  {
+    id: "svc-analytics",
+    code: "04",
+    title: "AI Data Analytics",
+    description:
+      "Natural-language querying over your databases with automated KPIs, charts and dashboards.",
+    stack: ["Pandas", "SQL", "Dashboards"],
+  },
+  {
+    id: "svc-vision",
+    code: "05",
+    title: "Computer Vision",
+    description:
+      "Object detection, OCR and image-analysis pipelines tailored to your data.",
+    stack: ["YOLO", "OpenCV", "PyTorch"],
+  },
+  {
+    id: "svc-backend",
+    code: "06",
+    title: "AI Backend & APIs",
+    description:
+      "Production-ready APIs that connect models, databases and your frontend — containerised and deployable.",
+    stack: ["FastAPI", "Docker", "REST"],
+  },
+] as const;
+
+export const ENGAGEMENT_MODELS = [
+  {
+    id: "eng-fixed",
+    title: "Fixed-scope project",
+    detail: "Clear deliverables, timeline and price agreed upfront. Ideal for MVPs and prototypes.",
+  },
+  {
+    id: "eng-contract",
+    title: "Contract basis",
+    detail: "Hourly or monthly contract to extend your team on an AI feature or product.",
+  },
+  {
+    id: "eng-consult",
+    title: "Consult & integrate",
+    detail: "Short engagements to plan, review or integrate AI into an existing system.",
+  },
+] as const;
+
+export const FREELANCE_PROCESS = ["Discuss", "Scope", "Build", "Deliver", "Support"] as const;

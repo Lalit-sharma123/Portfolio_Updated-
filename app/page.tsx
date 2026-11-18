@@ -13,7 +13,10 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import AboutSection from "../components/AboutSection";
 import ContactSection from "../components/ContactSection";
+import ExperienceSection from "../components/ExperienceSection";
 import Footer from "../components/Footer";
+import FreelanceSection from "../components/FreelanceSection";
+import ProfileChatbot from "../components/ProfileChatbot";
 import HeadlineReveal from "../components/HeadlineReveal";
 import HeroSection from "../components/HeroSection";
 import InViewMount from "../components/InViewMount";
@@ -23,7 +26,7 @@ import SpatialSection from "../components/SpatialSection";
 import StackTransitions from "../components/StackTransitions";
 import StickyDeckSection from "../components/StickyDeckSection";
 import { HoverScrambleText } from "../components/ui/HoverScrambleText";
-import { BUILDING } from "../lib/data";
+import { BUILDING, PROFILE, SKILL_PILLS } from "../lib/data";
 import { burnControls } from "../lib/burnControls";
 import { getLenis } from "../lib/lenisInstance";
 import {
@@ -45,41 +48,18 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 const NAV_ITEMS = [
   { id: "projects", label: "Projects" },
+  { id: "experience", label: "Experience" },
+  { id: "freelance", label: "Hire Me" },
   { id: "skills", label: "Skills" },
   { id: "about", label: "About" },
   { id: "contact", label: "Contact" },
 ] as const;
 
-const SKILL_PILLS = [
-  "Python",
-  "SQL",
-  "Flask",
-  "Deep Learning",
-  "Computer Vision",
-  "Recommender Systems",
-  "LLMs / GenAI",
-  "YOLO",
-  "Semantic Segmentation",
-  "PyTorch",
-  "TensorFlow",
-  "Keras",
-  "OpenCV",
-  "NumPy",
-  "Pandas",
-  "FastAPI",
-  "Docker",
-  "Google Cloud",
-  "GPU Computing",
-  "Agentic AI",
-  "CI/CD",
-  "REST APIs",
-  "LangChain",
-  "Hugging Face",
-] as const;
-
 const CHAPTER_TARGETS = [
   "projects",
   "currently-building",
+  "experience",
+  "freelance",
   "skills",
   "about",
   "contact",
@@ -113,6 +93,15 @@ const FAILURE_CLEAR_TARGETS = [
      exit; fail-open must restore it or the hero CTAs stay hidden. */
   ".hero-sub-content",
   ".hero-buttons",
+  ".xp-spine-fill",
+  ".xp-comet",
+  ".xp-node",
+  ".xp-card",
+  ".xp-date",
+  ".xp-stagger",
+  ".fl-reveal",
+  ".fl-service",
+  ".fl-process-fill",
 ].join(",");
 
 const GravityPit = dynamic(() => import("../components/GravityPit"), {
@@ -529,7 +518,7 @@ export default function Home() {
           </ul>
 
           <a
-            href="/assets/Lalit_Resume.pdf"
+            href={PROFILE.resume}
             target="_blank"
             rel="noopener noreferrer"
             className="nav-resume"
@@ -591,7 +580,7 @@ export default function Home() {
         ))}
 
         <a
-          href="/assets/Lalit_Resume.pdf"
+          href={PROFILE.resume}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => setIsMenuOpen(false)}
@@ -638,6 +627,10 @@ export default function Home() {
               <PipelineGrid items={BUILDING} />
             </div>
           </SpatialSection>
+          {/* Experience flows naturally inside the Building sheet so the
+              index-coupled StackTransitions boundaries stay untouched. */}
+          <ExperienceSection />
+          <FreelanceSection />
           <div className="stack-veil" aria-hidden="true" />
         </div>
 
@@ -658,7 +651,7 @@ export default function Home() {
                 style={{ marginBottom: "20px" }}
               >
                 <div className="ed-header-row sp-reveal">
-                  <span className="ed-eyebrow">03 / Skills</span>
+                  <span className="ed-eyebrow">05 / Skills</span>
                   <span className="ed-meta mono">drag to interact</span>
                 </div>
                 <h2 className="ed-heading ed-heading--md sp-reveal">
@@ -726,6 +719,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <ProfileChatbot ready={preloaderDone} />
       <StackTransitions />
       <HeadlineReveal />
       <ScrollVelocitySkew />

@@ -181,7 +181,7 @@ export default function AboutSection() {
             {/* Section header — editorial display heading */}
             <header className="ed-header" style={{ marginBottom: "13px" }}>
               <div className="ed-header-row" style={{ marginBottom: "0px", paddingBottom: "4px" }}>
-                <span className="ed-eyebrow">04 / Profile</span>
+                <span className="ed-eyebrow">06 / Profile</span>
               </div>
               <h2 className="ed-heading ed-heading--md">
                 <ScrollScrambleText segments={[{ text: "About " }, { text: "me", em: true }]} />

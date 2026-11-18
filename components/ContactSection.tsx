@@ -8,6 +8,7 @@ import { RollingHeadline } from "./ui/RollingHeadline";
 import { HoverScrambleText } from "./ui/HoverScrambleText";
 import { GitHubIcon, LinkedInIcon, MailIcon, DownloadIcon } from "./ui/icons";
 import { burnControls } from "../lib/burnControls";
+import { PROFILE } from "../lib/data";
 import { MOTION_FAILED_EVENT } from "../lib/motionEvents";
 import {
   IMMERSIVE_SCROLL_MEDIA_QUERY,
@@ -207,9 +208,18 @@ export default function ContactSection({ animate = true }: ContactSectionProps) 
 
           {/* Sub-copy */}
           <p className="contact-text">
-            I&apos;m actively looking for internships and opportunities to build
-            impactful systems. Whether you have a question, a project idea, or
-            just want to connect, my inbox is open.
+            Working as an AI Engineer and open to{" "}
+            <strong>freelance &amp; contract-basis projects</strong>. Whether you
+            have a product idea, an AI feature to ship, or just want to connect,
+            my inbox is open.
+          </p>
+
+          <p className="contact-availability mono">
+            <span className="status-dot" aria-hidden="true">
+              <span className="status-dot-pulse" />
+            </span>
+            Available for freelance ·{" "}
+            <a href={`mailto:${PROFILE.email}`}>{PROFILE.email}</a>
           </p>
 
           {/* Button grid — sequentially revealed by the secondary GSAP tween */}
@@ -224,7 +234,7 @@ export default function ContactSection({ animate = true }: ContactSectionProps) 
             }}
           >
             <a
-              href="mailto:jonathan.jesni.m@gmail.com"
+              href={`mailto:${PROFILE.email}?subject=${encodeURIComponent("Project enquiry")}`}
               className="contact-link"
               id="contact-email-btn"
             >
@@ -244,7 +254,7 @@ export default function ContactSection({ animate = true }: ContactSectionProps) 
             </a>
 
             <a
-              href="https://www.linkedin.com/in/jonathan-jesni/"
+              href={PROFILE.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link"
@@ -255,7 +265,7 @@ export default function ContactSection({ animate = true }: ContactSectionProps) 
             </a>
 
             <a
-              href="/assets/Jonathan_Resume.pdf"
+              href={PROFILE.resume}
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link"
